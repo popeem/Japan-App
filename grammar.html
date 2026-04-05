@@ -5,23 +5,17 @@
 <title>Grammar</title>
 </head>
 
-<body style="text-align:center; background:#0f172a; color:white;">
+<body style="text-align:center;background:#0f172a;color:white;">
 
 <h1>🧠 ไวยากรณ์</h1>
 
 <button onclick="go('lesson.html')">📘 เรียน</button>
 <button onclick="go('exercise.html')">📝 แบบฝึก</button>
 
-<button onclick="goBack()">⬅ กลับ</button>
+<button onclick="go('index.html')">⬅ กลับ</button>
 
 <script>
-function go(page){
-  window.location.href = page;
-}
-
-function goBack(){
-  window.location.href = "index.html";
-}
+function go(p){ location.href = p; }
 </script>
 
 </body>
