@@ -1,0 +1,6 @@
+{
+  "name": "Japanese App",
+  "short_name": "JP App",
+  "start_url": "index.html",
+  "display": "standalone"
+}
