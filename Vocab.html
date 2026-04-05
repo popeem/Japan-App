@@ -1,76 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="th">
 <head>
 <meta charset="UTF-8">
-<title>JLPT App</title>
-
-<style>
-body {
-  font-family: Arial;
-  background: #0f172a;
-  color: white;
-  text-align: center;
-}
-
-.page {
-  display: none;
-}
-
-.active {
-  display: block;
-}
-
-.card {
-  background: #1e293b;
-  padding: 20px;
-  border-radius: 15px;
-  width: 90%;
-  max-width: 400px;
-  margin: auto;
-  margin-top: 30px;
-}
-
-button {
-  margin: 5px;
-  padding: 12px;
-  width: 90%;
-  border-radius: 10px;
-  border: none;
-  background: #334155;
-  color: white;
-}
-</style>
+<title>เกมคำศัพท์</title>
+<script src="game.js"></script>
 </head>
 
-<body>
+<body style="text-align:center;background:#0f172a;color:white;">
 
-<!-- 🏠 MENU -->
-<div id="menu" class="page active">
-  <div class="card">
-    <h1>🎮 JLPT App</h1>
-    <button onclick="goPage('lesson')">📚 เลือกบท</button>
-  </div>
-</div>
+<h1>📖 เกมคำศัพท์</h1>
+<h2 id="question"></h2>
+<div id="choices"></div>
+<p id="status"></p>
 
-<!-- 📚 LESSON -->
-<div id="lesson" class="page">
-  <div class="card">
-    <h1>📚 เลือกบท</h1>
-    <div id="lessonList"></div>
-    <button onclick="goPage('menu')">⬅ กลับ</button>
-  </div>
-</div>
+<button onclick="goBack()">⬅ กลับ</button>
 
-<!-- 🎮 GAME -->
-<div id="game" class="page">
-  <div class="card">
-    <h1 id="question"></h1>
-    <div id="choices"></div>
-    <button onclick="goPage('menu')">⬅ Menu</button>
-  </div>
-</div>
-
-<script src="game.js"></script>
+<script>
+function goBack(){ location.href='index.html'; }
+startGame();
+</script>
 
 </body>
 </html>
