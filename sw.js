@@ -1,0 +1,11 @@
+self.addEventListener("install", e=>{
+  e.waitUntil(
+    caches.open("app").then(c=>c.addAll([
+      "/",
+      "index.html",
+      "game.js",
+      "data.json",
+      "grammar.json"
+    ]))
+  );
+});
