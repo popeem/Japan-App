@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>เกมคำศัพท์</title>
+
+<style>
+body {
+  font-family: Arial;
+  background: #0f172a;
+  color: white;
+  text-align: center;
+  margin: 0;
+}
+
+.card {
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 420px;
+  margin: auto;
+  margin-top: 30px;
+}
+
+h1 {
+  font-size: 26px;
+}
+
+h2 {
+  font-size: 22px;
+  margin-top: 10px;
+}
+
+button {
+  margin: 6px;
+  padding: 12px;
+  width: 90%;
+  border-radius: 10px;
+  border: none;
+  background: #334155;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #475569;
+}
+
+#status {
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+#backBtn {
+  margin-top: 15px;
+  background: #ef4444;
+}
+</style>
+
+<script src="game.js"></script>
+</head>
+
+<body>
+
+<div class="card">
+
+  <!-- 🔥 หัวข้อ -->
+  <h1>📖 เกมคำศัพท์</h1>
+
+  <!-- 📝 คำถาม -->
+  <h2 id="question">Loading...</h2>
+
+  <!-- 🎯 ตัวเลือก -->
+  <div id="choices"></div>
+
+  <!-- ✅ / ❌ -->
+  <div id="status"></div>
+
+  <!-- 🔙 กลับ -->
+  <button id="backBtn" onclick="goBack()">⬅ กลับเมนู</button>
+
+</div>
+
+<script>
+// กลับหน้าเมนู
+function goBack(){
+  window.location.href = "index.html";
+}
+
+// เริ่มเกม
+startGame();
+</script>
+
+</body>
+</html>
