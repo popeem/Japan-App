@@ -3,8 +3,8 @@ let current=null;
 
 // ================= LOAD
 async function load(){
-  data = await fetch("data.json").then(r=>r.json());
-  grammarData = await fetch("grammar.json").then(r=>r.json());
+  data = await fetch("Vocab.json").then(r=>r.json());
+  grammarData = await fetch("Grammar.json").then(r=>r.json());
 }
 
 // ================= VOCAB
